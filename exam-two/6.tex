@@ -1,0 +1,82 @@
+\noindent
+\textbf{\LARGE Definitions and Theorems} \\
+\large Week: Oct. 7 - Oct. 11
+
+\normalsize
+
+\section*{Theorems, Corollaries, and Propositions}
+
+\subsection*{1.6 Bases and Dimension}
+
+\textbf{Thm 1.6.11:} Let $V$ be a vector space and suppose $S := \{\bar v_1, \ldots , \bar v_n \}$ and $T := \{\bar w_1, \ldots , \bar w_m\}$ are two bases for $V$. Then $m = n$. 
+
+\bigskip 
+
+\noindent 
+\textbf{Corollary 1.6.14:} Let $W$ be a subspace of a finite dimensional vector space $V$. Then dim($w$) $\le$ dim($v$). Also, dim($w$) = dim($v$) iff $w = v$.
+
+\bigskip  
+
+\noindent 
+\textbf{Corollary 1.6.15:} Given a homogeneous system with $n$ variables, the solution set $W$ is always a subspace of $\mathbb{R} ^n$ and dim($w$) = the number of free variables. 
+
+\bigskip 
+
+\noindent 
+\textbf{Thm 1.6.18:} Let $w_1$ and $w_2$ be subspaces of a finite dimensional vector space $V$. \\
+Then dim($w_1 + w_2$) = dim($w_1$) + dim($w_2$) - dim($w_1 \cap w_2$).
+
+\bigskip 
+
+\noindent 
+\textbf{Thm (2/3 Thm):} Let $V$ be a finite dimensional vector space and let $n := $ dim($v$) $< \infty$. Suppose $S$ is a subset of $V$. Then any two of the following conditions imply the third:
+\begin{enumerate}
+    \item $S$ is linearly independent
+    \item $S$ spans $V$
+    \item $S$ has $n$ elements.
+\end{enumerate}
+
+\subsection*{2.1 Linear Transformations}
+
+\textbf{Prop:} Let $V, W$ be vector spaces. A transformation $T: V \rightarrow W$ is linear iff $\forall \bar x, \bar y \in V, \; \forall c \in \mathbb{R}, \; T(c\bar x + \bar y) = c \cdot T(\bar x) + T(\bar y)$.
+
+\bigskip 
+
+\noindent 
+\textbf{Prop:} Let $T:V \rightarrow W$ be a linear map. Then 
+\begin{enumerate}
+    \item $T(\bar 0_v) = \bar 0_w$
+    \item $\forall \bar v \in V, \; T(-\bar v) = -T(\bar v)$.
+\end{enumerate}
+
+\bigskip 
+
+\noindent 
+\textbf{Prop 2.13:} Let $T : V \rightarrow W$ be a linear map. Then, $\forall n \in \mathbb{N}$, if $\bar v_1, \ldots , \bar v_n \in V$ and $c_1, \ldots , c_n \in \mathbb{R}$ then $T(c_1\bar v_1 + \ldots + c_n\bar v_n) = c_1 T(\bar v_1) + \ldots + c_n T (\bar v_n)$.
+
+\pagebreak 
+
+\noindent 
+\textbf{Prop 2.1.14+:} Let $T : V \rightarrow W$ be a linear map and let $\{\bar v_1, \ldots , \bar v_n\} \subseteq V$ be a basis for $V$. 
+\begin{enumerate}
+    \item Suppose $\{\bar w_1, \ldots , \bar w_n\} \subseteq W$ be any set. Then there is a linear map $\widetilde{T} : V \rightarrow W$ such that $\widetilde{T} (\bar v_i) = \bar w_i$, for $i = 1, \ldots , n$.
+    \item Assume $S : V \rightarrow W$ is any linear map such that $S(\bar v_i) = T(\bar v_i)$ for $i = 1, \ldots , n$. Then $S = T$ on $V$, i.e., $\forall \bar v \in V, \; S(\bar v) = T(\bar v)$.
+\end{enumerate}
+
+\section*{Definitions}
+
+\textbf{Def 1.6.12:} Let $V$ be a vector space.
+\begin{enumerate}
+    \item If $V$ has a finite basis (basis with finitely many vectors) then $V$ is said to be \textit{finite dimensional}. 
+    \item If $V$ is finite dimensional then the \textit{dimension} of V, denoted by dim($v$), is the number of vectors in a, hence any, basis for $V$. 
+\end{enumerate}
+
+\bigskip 
+
+\noindent 
+\textbf{Def 2.1.1:} Let $V, W$ be vector spaces. A transformation $T:V\rightarrow W$ is said to be \textit{linear} if $T$ satisfies both:
+\begin{enumerate}
+    \item $\forall \bar x, \bar y \in V, \; T(\bar x + \bar y) = T(\bar x) + T(\bar y)$
+    \item $\forall \bar x \in V, \; \forall c \in \mathbb{R}, \; T(c\bar x) = c \cdot T(\bar x)$.
+\end{enumerate}
+

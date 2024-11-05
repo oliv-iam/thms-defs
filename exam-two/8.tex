@@ -1,0 +1,63 @@
+\noindent
+\textbf{\LARGE Definitions and Theorems} \\
+\large Week: Oct. 21 - Oct. 25
+
+\normalsize
+
+\section*{Propositions, Theorems, and Corollaries}
+
+\subsection*{2.2 Linear Transformations on Basis Elements}
+
+\textbf{Prop:} Let $A \in M_{m \times n}(\mathbb{R})$ and define $T: \mathbb{R}^n \rightarrow \mathbb R^m$ by setting $T(\bar x) := A\bar x, \; \bar x \in \mathbb{R}^n$. Then $T$ is a linear transformation. Moreover, if $\alpha = $ standard basis in $\mathbb{R}^4$ and $\beta = $ standard basis in $\mathbb{R}^m$, then $[T]_\alpha ^ \beta = A$.
+
+\bigskip 
+
+\noindent 
+\textbf{Step 4:} Putting it all together \\
+\textbf{Thm:} Let $T: V \rightarrow W$ be a linear transformation and $\alpha := \{\bar v_1, \ldots , \bar v_n \}$ be a basis for $V$, $\beta := \{\bar w_1, \ldots , \bar w_m \}$ be a basis for $W$. Then $\forall \bar v \in V$, one has $[T(\bar v)]_\beta = [T]_\alpha ^\beta [\bar v]_\alpha$.
+
+\bigskip 
+
+\noindent 
+\textbf{Prop 2.2.15:} Let $V$ be an n-dimensional vector space with basis $\alpha$ and $W$ be an m-dimensional vector space with basis $\beta$. Then the mapping $T: V \rightarrow W$ is linear iff $\exists A \in M_{m \times n}(\mathbb{R})$ s.t. $[T(\bar v)]_\beta = A[\bar v]_\alpha, \; \forall \bar v \in V$.
+
+\bigskip 
+
+\noindent 
+\textbf{Corollary:} A mapping $T: \mathbb{R}^n \rightarrow \mathbb{R}^m$ is linear iff $\exists A \in M_{m \times n}(\mathbb{R})$ s.t. $T(\bar x) = A\bar x, \; \forall \bar x \in \mathbb{R}^n$.
+
+\subsection*{2.3 Kernel and Image of a Linear Map}
+
+\textbf{Thm 2.3.2/2.3.4:} Let $T : V \rightarrow W$ be a linear map. Then 
+\begin{enumerate}
+    \item ker($T$) is a subspace of $V$
+    \item im($T$) is a subspace of $W$.
+\end{enumerate}
+
+\bigskip 
+
+\noindent 
+\textbf{Prop 2.3.7:} Let $T: V \rightarrow W$ be a linear map, where $V$ is an n-dimensional vector space with basis $\alpha$, and $W$ is an m-dimensional vector space with basis $\beta$. Then $\bar v \in$ ker($T$) iff $[\bar v]_\alpha \in $ ker($[T]_\alpha ^ \beta$).
+
+\bigskip 
+
+\noindent 
+\textbf{Prop 2.3.8:} Let $\alpha := \{\bar v_1, \ldots , \bar v_n \}$ be a basis for a vector space $V$. Then the vectors $\{\bar x_1, \ldots , \bar x_k \} \subseteq V$ are linearly independent iff the coordinate vectors $\{[\bar x_1]_\alpha, \ldots , [\bar x_k]_\alpha \} \subseteq \mathbb{R}^n$ are linearly independent. 
+
+\bigskip 
+
+\noindent 
+\textbf{Prop 2.3.12/2.3.14:} Let $T: V \rightarrow W$ be a linear map and $\alpha := \{\bar v_1, \ldots , \bar v_n \}$ be a basis for $V$. Then $S := \{T(\bar v_1), \ldots , T(\bar v_n) \subseteq W$ spans im($T$), i.e., Span($S$) = im($T$). Equivalently, $\{[T(\bar v_1)]_\beta , \ldots , [T(\bar v_n)]_\beta \} \subseteq \mathbb{R}^m$ spans im($[T]_\alpha ^ \beta$ if $\beta = \{\bar w_1, \ldots , \bar w_m \}$ is a basis for $W$. 
+
+\pagebreak
+\section*{Definitions}
+\textbf{Def 2.3.1/2.3.10:} Let $T: V \rightarrow W$ be a linear map. 
+\begin{enumerate}
+    \item The \textit{kernel} (or \textit{nullspace}) of $T$ is the set ker($T$) := $\{\bar v \in V \mid T(\bar v) = \bar 0_w\}$ 
+    \item The \textit{image} (or \textit{range}) of $T$ is the set
+    \begin{align*}
+        \text{im($T$)} &:= \{T(\bar v) \mid \bar v \in V\} \\
+        &= \{\bar w \in W \mid \exists \bar v \in V \text{ s.t. } T(\bar v) = \bar w\}
+    \end{align*}
+\end{enumerate}
+

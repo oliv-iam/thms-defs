@@ -1,0 +1,38 @@
+\noindent
+\textbf{\LARGE Definitions and Theorems} \\
+\Large Week: Sep. 4 - 6
+
+\section{Definitions}
+
+\textbf{Def 1.1.1:} A (real) vector space is a triplet $(V, +, \cdot )$ where $v$ is a set (whose elements are called vectors) and $+$ and $\cdot$ are two operations satisfying: 
+\begin{itemize}
+  \item Vector addition ($+$): $\forall \bar x, \bar y \in V, \; \bar x + \bar y \in V $
+  \item Scalar multiplication ($\cdot$): $\forall c \in \mathbb{R}, \; \forall \bar x \in V, \; c \cdot \bar x \in V$
+\end{itemize}
+\begin{itemize}
+    \item[\textbf{A1}:] {$\forall \bar x, \bar y, \bar z \in V, \; (\bar x+\bar y) + \bar z = \bar x + (\bar y + \bar z)$} 
+    \item[\textbf{A2}:] {$\forall \bar x, \bar y \in V, \; \bar x + \bar y = \bar y + \bar x$}
+    \item[\textbf{A3}:] {$\exists \bar z \in V \text{ s.t. } \forall \bar x \in V, \; \bar x + \bar z = \bar x$}
+    \item[\textbf{A4}:] {$\forall \bar x \in V, \; \exists \bar y \in v \text{ s.t. } \bar x + \bar y = \bar z$}
+    \item[\textbf{A5}:] {$\forall \bar x, \; \bar y \in V, \; \forall c \in \mathbb{R}, \; c \cdot (\bar x + \bar y) = c \cdot \bar x + c \cdot \bar y$}
+    \item[\textbf{A6}:] {$\forall \bar x \in V, \; \forall c, d \in \mathbb{R}, \; (c + d) \cdot \bar x = c \cdot \bar x + d \cdot \bar x$}
+    \item[\textbf{A7}:] {$\forall \bar x \in V, \; \forall c, d \in \mathbb{R}, \; (cd) \cdot \bar x = c \cdot (d \cdot \bar x)$}
+    \item[\textbf{A8}:] {$\forall \bar x \in V, \; 1 \cdot \bar x = \bar x$} 
+\end{itemize}
+
+\pagebreak
+\section{Theorems}
+
+\textbf{Thm 1:} $\mathbb{R} ^n $ is a vector space under the operations:
+\begin{enumerate}
+    \item {$(a_1, ..., a_n) + (b_1, ..., b_n) = (a_1 + b_1, ..., a_n + b_n)$} 
+    \item {$c \cdot (a_1, ..., a_n) = (ca_1, ..., ca_n)$} 
+\end{enumerate}
+
+\textbf{Thm 2:} Let $F(\mathbb{R}) := $ the set of all functions $f:\mathbb{R} \rightarrow \mathbb{R}$. $F(\mathbb{R} )$ is a vector space under the operations:
+\begin{itemize}
+    \item {$\forall f, g \in F(\mathbb{R}), \; (f + g)(x) := f(x) + g(x), \; \x \in \mathbb{R}$}
+    \item {$\forall f \in F(\mathbb{R}), \; \forall c \in \mathbb{R}, \; (cf)(x) := c \cdot f(x), \; \forall x \in \mathbb{R}$}
+\end{itemize}
+
+\textbf{Thm 3:} Let $P_n (\mathbb{R}) := $ the set of all polynomials of degree $\le n$. $P_n (\mathbb{R})$ is a vector space under the same operations as in $F(\mathbb{R})$.

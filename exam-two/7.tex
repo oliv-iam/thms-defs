@@ -1,0 +1,76 @@
+\noindent
+\textbf{\LARGE Definitions and Theorems} \\
+\large Week: Oct. 16 - Oct. 18
+
+\normalsize
+
+\section*{Proposition}
+
+\subsection*{2.2 Linear Transformations on Basis Elements}
+
+\textbf{Prop:} Let $V$ be a vector space and $\alpha := \{\bar v_1, \ldots , \bar v_n \}$ be a finite basis for $V$. Define $T: V \rightarrow \mathbb{R}^n$ by $T(\bar v) := [\bar v]_\alpha$. Then $T$ is a linear map.
+
+\section*{Definitions}
+\subsection*{Encoding Transformations Using Matrices}
+
+\textbf{Step 1:} Coordinate vectors \\
+Suppose $\alpha := \{\bar v_1, \ldots, \bar v_n \}$ is a basis for a vector space $V$. Let $\bar v \in V$. Then $\exists ! \; c_i \in \mathbb{R}$ such that $\bar v = c_1 \bar v_1 + \ldots + c_n \bar v_n$.
+Define $[\bar v]_\alpha := \begin{bmatrix}
+    c_1 \\ \vdots \\ c_n
+\end{bmatrix}$.
+
+\bigskip 
+
+\noindent
+\textbf{Step 2:} Matrix of a linear transformation \\
+Let $T: V \rightarrow W$ be a linear map. Let $\alpha := \{\bar v_1, \ldots , \bar v_n \}$ be a basis for $V$, $\beta := \{ \bar w_1, \ldots, \bar w_m \}$ be a basis for $W$. \\
+Def: the matrix of $T: V \rightarrow W$ with respect to $\alpha$ and $\beta$ is \\
+$[T]^\beta _\alpha = \begin{bmatrix}
+    a_{11} & \ldots & a_{1n} \\
+    \vdots & \ddots & \vdots \\
+    a_{m1} & \ldots & a_{mn}
+\end{bmatrix}
+ = \begin{bmatrix}
+     | &  & | \\
+     [T(\bar v_1)]_\beta & \ldots & [T(\bar v_n)]_\beta \\
+     | & & |
+ \end{bmatrix}$.
+
+\bigskip 
+
+\noindent 
+\textbf{Step 3:} Matrix multiplication \\
+\noindent
+Def: Let $A := [a_{ij}]_{\substack{1 \le i \le n \\ 1 \le j \le m}} 
+\in M_{m \times n}(\mathbb{R})$. 
+Let $\bar x = \begin{bmatrix}
+    x_1 \\ \vdots \\ x_n
+\end{bmatrix}$. \\
+% \begin{align*}
+Then define
+$A \bar x
+= \begin{bmatrix}
+    a_{11} & a_{12} & \ldots & a_{1n} \\ 
+    a_{21} \\
+    \vdots \\ 
+    a_{m1} & \ldots & \ldots & a_{mn}
+\end{bmatrix}
+\begin{bmatrix}
+    x_1 \\ \vdots \\ x_n
+\end{bmatrix}$ \\
+$:= x_1 
+\begin{bmatrix}
+    a_{11} \\ \vdots \\ a_{m1}
+\end{bmatrix}
+ + \; x_2 \begin{bmatrix}
+    a_{12} \\ \vdots \\ a_{m2}
+\end{bmatrix}
+ + \ldots + x_n \begin{bmatrix}
+    a_{1n} \\ \vdots \\ a_{mn}
+\end{bmatrix} 
+:= \begin{bmatrix}
+    a_{11}x_1 + a_{21}x_2 + \ldots + a_{1n}x_n \\ 
+    \vdots \\
+    a_{m1}x_1 + \ldots + \ldots + a_{mn}x_n
+\end{bmatrix}$
+% \end{align*}
