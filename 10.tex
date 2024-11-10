@@ -1,0 +1,133 @@
+\noindent
+\textbf{\LARGE Definitions and Theorems} \\
+\large Week: Nov. 4 - Nov. 8
+
+\normalsize
+
+\section*{Theorems, Propositions and Corollaries}
+
+\subsection*{2.5 Composition of Linear Transformations}
+
+\textbf{Prop 2.5.1:} Let $S: U \rightarrow V, \; T: V \rightarrow W$ be linear maps. Then $TS: U \rightarrow W$ is linear.
+
+\bigskip
+
+\noindent
+\textbf{Prop:} Let $S: V \rightarrow W, \; T: V \rightarrow W$ be linear maps. Then the following functions are also linear. 
+\begin{enumerate}
+    \item $S + T: V \rightarrow W, \; (S + T)(\bar x) := S(\bar x) + T(\bar x).$
+    \item if $c \in \mathbb{R}$ is fixed, $cT: V \rightarrow W,\; (cT)(\bar x) := c \cdot T(\bar x)$.
+\end{enumerate}
+
+\bigskip 
+
+\noindent 
+\textbf{Prop 2.5.4:} 
+Let
+$\begin{aligned}
+    R, R_1, R_2 &: U \rightarrow V \\
+    S, S_1, S_2 &: V \rightarrow W \\ 
+    T &: W \rightarrow Z
+\end{aligned}$ be linear maps. Then 
+\begin{enumerate}
+    \item $T(SR) = (TS)R$
+    \item $S(R_1 + R_2) = SR_1 + SR_2$
+    \item $(S_1 + S_2)R = S_1R + S_2R$
+\end{enumerate}
+
+\bigskip 
+
+\noindent 
+\textbf{Prop 2.5.6:} Let $S: U \rightarrow V$ and $T: V \rightarrow W$ be linear maps. Then 
+\begin{enumerate}
+    \item ker($S$) $\subseteq$ ker($TS$)
+    \item im($TS$) $\subseteq$ im($T$)
+\end{enumerate}
+
+\bigskip 
+
+\noindent 
+\textbf{Thm 2.5.13:} Let $S: U \rightarrow V, \; T: V \rightarrow W$ be linear maps and $\alpha, \beta, \gamma$ be finite bases for $U, V, W$ respectively. 
+Then $[TS]_\alpha^\beta = [T]_\beta^\gamma[S]_\alpha^\beta$. 
+So, $\forall \bar v \in V$, $[(TS)(\bar v)]_\gamma = [T]_\beta^\gamma[S]_\alpha^\beta[\bar v]_\alpha$
+
+\bigskip 
+
+\noindent 
+\textbf{Corollary 2.5.14:} Let $A, B, C$ be matrices of the "correct sizes" (so that matrix multiplication is well-defined). Then 
+\begin{enumerate}
+    \item $(AB)C = A(BC)$
+    \item $A(B + C) = AB + AC$
+    \item $(A + B)C = AC + BC$
+\end{enumerate}
+
+\bigskip 
+\noindent
+\textbf{Prop:} Let $A \in M_{m \times n}(\mathbb{R})$. Then 
+\begin{enumerate}
+    \item $AI_{n \times n} = A$ 
+    \item $I_{m \times m}A = A$
+\end{enumerate}
+
+\subsection*{2.6 Inverse of a Linear Transformation}
+
+\textbf{Prop:} Let $T: V \rightarrow W$ be an invertible linear map. (so $T^{-1}: W \rightarrow V$ exists).
+\begin{enumerate}
+    \item $T^{-1}$ is unique 
+    \item $T^{-1}: W \rightarrow V$ is also invertible and $(T^{-1})^{-1} = T$
+    \item If $R: U \rightarrow V$ is invertible then $TR: U \rightarrow W$ is invertible and $(TR)^{-1} = R^{-1}T^{-1}$
+\end{enumerate}
+
+\bigskip 
+
+\noindent 
+\textbf{Thm 2.6.2:} A linear map is invertible iff it is bijective. 
+
+\bigskip 
+
+\noindent 
+\textbf{Thm 2.6.1:} Let $T: V \rightarrow W$ be an invertible linear map. Then $T^{-1}:W \rightarrow V$ is linear. 
+
+\bigskip 
+
+\noindent
+\textbf{Prop 2.6.7:} Let $V$ and $W$ be vector spaces where dim($V$) $<$ $\infty$. \\ 
+Then $V \cong W$ iff dim($V$) = dim($W$). 
+
+\bigskip 
+
+\noindent 
+\textbf{Corollary:} All $n$-dim vector spaces are isomorphic to $\mathbb{R}^n$. 
+
+\pagebreak
+
+\section*{Definitions} 
+
+\textbf{Def:} Let $U,V,W$ be vector spaces and $S: U \rightarrow V, \; T: V \rightarrow W$ be two linear maps. 
+The \textit{composition} of $S$ with $T$ (written $T \circ S$ or $TS$) is the function $TS: V \rightarrow W$ defined by 
+\[(TS)(\bar u) = T(S(\bar u)), \; \forall \bar u \in U\].
+
+\noindent 
+\textbf{Def 2.5.10:} $A := [a_{ij}] \in M_{n \times r}(\mathbb{R}), \; B := [b_{ij}] \in M_{m \times n}(\mathbb{R})$. \\
+Then the \textit{matrix product} \\ 
+\[BA \in M_{m \times n}(\mathbb{R})\]  
+ is the matrix whose $j$th entry is 
+\[b_{i1}a_{1j} + \ldots + b_{in}a_{nj} = \sum_{k = 1}^{n} b_{ik}a_{kj} \] 
+
+\bigskip 
+
+\noindent
+\textbf{Def:} A linear map $T: V \rightarrow W$ is said to be \textit{invertible} if there is a function $S: W \rightarrow V$ (called the \textit{inverse of }$T$) satisfying 
+\begin{enumerate}
+    \item $(ST)(\bar v) = \bar v, \; \forall \bar v \in V$
+    \item $(TS)(\bar w) = \bar w, \; \forall \bar w \in W$
+\end{enumerate}
+
+\bigskip 
+
+\noindent 
+\textbf{Def 2.6.3/2.6.4:} 
+\begin{enumerate}
+    \item An invertible linear map is called an \textit{isomorphism}. 
+    \item Two vector spaces $V$ and $W$ are called \textit{isomorphic} (written as $V \cong W$) if there exists an isomorphism $T: V \rightarrow W$.
+\end{enumerate}

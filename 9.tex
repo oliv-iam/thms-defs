@@ -6,11 +6,11 @@
 
 
 \section*{Theorems, Propositions, Corollaries}
-\subsection*{Kernel and Image of a Linear Map}
+\subsection*{2.3 Kernel and Image of a Linear Map}
 
-\textbf{Thm 2.3.17 [Rank-Nullify Thm]:} Let $V$ be an n-dimensional vector space and $T: V \rightarrow W$ be a linear map. Then dim(ker($T$)) + dim(im($T$)) = dim($V$).
+\textbf{Thm 2.3.17 [Rank-Nullity Thm]:} Let $V$ be an n-dimensional vector space and $T: V \rightarrow W$ be a linear map. Then dim(ker($T$)) + dim(im($T$)) = dim($V$).
 
-\subsection*{Injectivity and Surjectivity}
+\subsection*{2.4 Applications of the Rank-Nullity Theorem}
 
 \textbf{Prop 2.4.2/2.4.7:} Let $T: V \rightarrow W$ be a linear map. Then
 \begin{enumerate}
@@ -21,7 +21,7 @@
 % \bigskip 
 
 \noindent
-\textbf{Corollary [Rank-Nullify]:} Suppose $T: V \rightarrow W$ is a linear map, where $V$ is finite dimensional. Then
+\textbf{Corollary [Rank-Nullity]:} Suppose $T: V \rightarrow W$ is a linear map, where $V$ is finite dimensional. Then
 \begin{enumerate}
     \item $T$ is injective iff dim(im($T$)) = dim($V$) 
     \item If dim($W$) $<$ dim($V$) then $T$ is not injective
@@ -31,8 +31,10 @@
     \item If dim(W) $\ne$ dim($V$) then $T$ is not bijective.   
 \end{enumerate}
 
-\subsection*{Inverse Image of a Linear Map}
+\noindent 
 \textbf{Prop:} Let $T: V \rightarrow W$ be a linear map and let $\bar w \in $ im($T$). Take any vector $\bar v \in T^{-1}(\{\bar w\})$. Then $T^{-1}(\{\bar w\}) = \bar v + $ ker($T$)
+
+\bigskip
 
 \noindent 
 \textbf{Corollary:} Let $T: V \rightarrow W$ be a linear map between finite dimensional vector spaces and let $\bar w \in W$. Then there is a unique vector $\bar v \in V$ such that $T(\bar v) = \bar w$ iff 
