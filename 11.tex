@@ -1,0 +1,102 @@
+\noindent
+\textbf{\LARGE Definitions and Theorems} \\
+\large Week: Nov. 11 - Nov. 15
+
+\normalsize
+
+\section*{Propositions}
+
+\subsection*{2.6 Inverse of a Linear Transformation}
+
+\textbf{Prop 2.6.11+:} Let $T: V \rightarrow W$ be a linear map between finite dimension vector spaces (of the same dimension) and let $\alpha$, $\beta$ be bases for $V$ and $W$, respectively. 
+Then $T: V \rightarrow W$ is invertible iff the matrix $[T]_\alpha^\beta \in M_{n \times n}(\mathbb{R})$ is invertible. In this case, $[T^{-1}]^\alpha_\beta = ([T]_\alpha^\beta)^{-1}$.
+
+\bigskip
+
+\noindent
+\textbf{Prop:} Let $A \in M_{n \times n}(\mathbb{R})$ and let 
+$ \begin{aligned}
+    T_A: \; &\mathbb{R}^n \rightarrow \mathbb{R}^n \\
+    &\bar x \longmapsto A\bar x
+\end{aligned}$.
+Then the matrix $A$ is invertible (so $A^{-1}$ exists) iff the linear map $T_A$ is invertible. In this case, $(T_A)^{-1} = {T_A}^{-1}$.
+
+\bigskip 
+
+\noindent 
+\textbf{Prop:} Let $A, B \in M_{n \times n}(\mathbb{R})$ be invertible. Then 
+\begin{enumerate}
+    \item $A^{-1}$ is unique 
+    \item $A^{-1}$ is invertible and $(A^{-1})^{-1} = A$. 
+    \item $AB$ is invertible and $(AB)^{-1} = B^{-1}A^{-1}$
+\end{enumerate}
+
+\bigskip
+
+\noindent
+\textbf{Prop:} Let $A \in M_{n \times n}(\mathbb{R})$. Then the following are equivalent:
+\begin{enumerate}
+    \item $A$ is invertible ($A^{-1} \in M_{n \times n}(\mathbb{R})$ exists)
+    \item The columns of $A$ span $\mathbb{R}^n$
+    \item The columns of $A$ are linearly independent
+    \item The columns of $A$ form a basis for $\mathbb{R}^n$
+    \item The only solution to $A\bar x = \bar 0$ is $\bar x = \bar 0$
+    \item $A$ can be row reduced to the $n \times n$ identity matrix
+\end{enumerate}
+
+\pagebreak
+
+\subsection*{2.7 Change of Basis}
+
+\textbf{Prop 2.7.3 [vector 'translator']:} Let $\alpha, \beta$ be two finite bases for a vector space $V$. Then 
+\[\forall \bar v \in V, \; [id_V]_\alpha^\beta [\bar v]_\alpha = [\bar v]_\beta\]
+
+\noindent 
+\textbf{Prop:} Let $\alpha, \beta$ be finite bases for a vector space $V$. Then 
+\[[id_V]_\beta^\alpha = ([id_V]_\alpha^\beta)^{-1}\]
+
+\noindent 
+\textbf{Prop 2.7.5 [map 'translator']:} Let $V, W$ be two finite dimensional vector spaces, \\
+$T: V \rightarrow W$ be a linear map, and $\alpha, \alpha'$ be bases for $V$ and $\beta, \beta'$ be basis for $W$. 
+Then 
+\[[T]_{\alpha'}^{\beta'} = [id_W]_\beta^{\beta'}[T]_\alpha^\beta[id_V]_{\alpha'}^\alpha\]
+
+\noindent
+\textbf{Prop:} $A$ is similar to $B$ iff $B$ is similar to $A$.
+
+\subsection*{3.1 The Determinant as Area}
+
+\textbf{Prop:} A $2 \times 2$ matrix $A = 
+\begin{bmatrix}
+    a & b \\ 
+    c & d
+\end{bmatrix}$
+is invertible iff det($A$) = $0$. In this case, 
+\[A^{-1} = \frac{1}{\text{det}(A)}
+\begin{bmatrix}
+    d & -b \\ 
+    -c & a
+\end{bmatrix}
+\] 
+
+\pagebreak
+
+\section*{Definitions}
+
+\textbf{Def 2.6.10:} A matrix $A \in M_{n \times n}(\mathbb{R})$ is said to be \textit{invertible} if $\exists B \in M_{n \times n}(\mathbb{R})$ (called the \textit{inverse} of $A$) such that 
+\[AB = BA = I_{n \times n}\]
+
+\bigskip 
+
+\noindent 
+\textbf{Def 2.7.6:} A matrix $A$ is said to be \textit{similar} to a matrix $B$ if there is an invertible matrix $Q$ such that \[A = Q^{-1}BQ\]
+
+\bigskip 
+
+\noindent 
+\textbf{Def:} Let $A:= 
+\begin{bmatrix}
+    a & b \\ 
+    c & d
+\end{bmatrix} 
+\in M_{2 \times 2}(\mathbb{R})$. Then the \textit{determinant} of $A$ is det($A$) := $ad - bc \in \mathbb{R}$.
