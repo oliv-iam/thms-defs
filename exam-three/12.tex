@@ -1,0 +1,135 @@
+\noindent
+\textbf{\LARGE Definitions and Theorems} \\
+\large Week: Nov. 18 - Nov. 22
+
+\normalsize
+
+\section*{Theorems \& Propositions}
+
+\subsection*{3.2 Determinant of an $n \times n$ Matrix}
+
+\textbf{Prop:} Let $A \in M_{n \times n}(\mathbb{R})$ be an upper or lower triangular matrix (could be diagonal). Then 
+\[\det(A) = \text{product of diagonal entries} \]
+
+\bigskip 
+
+\noindent 
+\textbf{Prop:} Let $A \in M_{n \times n}(\mathbb{R})$ and let $B \in M_{n \times n}(\mathbb{R})$ be the matrix obtained from $A$ by performing a single row operation (call it $P$).
+Then
+$$
+\det(B) = 
+\begin{cases}
+    -\det(A) & $if $P $ = row swap$ \\
+    c \cdot \det(A) & $if $ P $ = multiply row by $ c \in \mathbb{R} \\
+    \det(A) & $if $ P $ = row replacement$
+\end{cases}
+$$
+
+\bigskip 
+
+\noindent 
+\textbf{Corollary:} Let $A \in M_{n \times n}(\mathbb{R})$. Then $\det(A) = 0$ iff any of the following are true:
+\begin{enumerate}
+    \item $A$ has a zero row (or column), i.e., all entries in the row (or column) are zero
+    \item $A$ has a repeated row (or column)
+    \item $A$ has two linearly dependent rows (or columns)
+\end{enumerate}
+
+\bigskip 
+
+\noindent 
+\textbf{Thm 3.2.14:} Let $A \in M_{n \times n}(\mathbb{R})$. Then $A$ is invertible iff $\det(A) \ne 0$. 
+
+\bigskip 
+
+\noindent 
+\textbf{Prop:} If $E$ is an elementary matrix then $E$ is invertible and its inverse, $E^{-1}$, is also an elementary matrix of the 'same type'. Moreover, 
+$$
+\det(E)=
+\begin{cases}
+    -1 & $if $ E = G_{ij} \\
+    c & $if $ E = F_i(c) \\
+    1 & $if $ E = F_{ij}(c)
+\end{cases}
+$$
+
+\bigskip 
+
+\noindent 
+\textbf{Corollary:} Let $E$ be an elementary matrix and let $D \in M_{n \times n}(\mathbb{R})$ be any matrix. Then 
+\[\det(ED) = \det(E) \cdot \det(D).\]
+More generally, $\forall k \in \mathbb{N}$, if $E_1, \ldots , E_k \in M_{n \times n}(\mathbb{R})$ are elementary matrixes, then 
+\[ \det(E_k E_{k - 1} \ldots E_2 E_1 D) = \det(E_k) \det(E_{k - 1}) \ldots \det(E_2) \det(E_1) \det(D) \]
+
+\pagebreak
+
+\subsection*{3.3 Further Properties of the Determinant}
+
+\textbf{Thm 3.3.7:} Let $A, B \in M_{n \times n}(\mathbb{R})$. Then 
+\[\det(AB) = \det(A)\det(B).\]
+
+\bigskip 
+
+\noindent 
+\textbf{Corollary:} Let $A \in M_{n \times n}(\mathbb{R})$ be invertible (so $A^{-1}$ exists). Then 
+\[\det(A^{-1})=\frac{1}{\det(A)}=[\det(A)]^{-1}\] 
+
+\bigskip 
+
+\noindent 
+\textbf{Prop:} Let $T: U \rightarrow V$ be a linear map where $V$ is finite dimensional and let $\alpha, \beta$ be two bases for $V$. Then 
+\[\det([T]_\alpha^\alpha)=\det([T]_\beta^\beta)\]
+
+\bigskip 
+
+\noindent 
+\textbf{Prop:} If $A, B \in M_{n \times n}(\mathbb{R})$ are similar, then $\det(A) = \det(B)$.
+
+\bigskip 
+
+\noindent 
+\textbf{Prop 3.3.11/3.3.12:} Let $V$ be a finite dimensional vector space and $S,T:V \rightarrow V$ be two linear maps. Then 
+\begin{enumerate}
+    \item $\det(TS)=\det(T)\det(S)$   
+    \item $T$ is an isomorphism iff $\det(T) \ne 0$ 
+    \item If $T$ is an isomorphism then $\det(T^{-1}) = \frac{1}{\det(T)}$ 
+\end{enumerate}
+
+\pagebreak
+
+\section*{Definitions}
+
+\textbf{Def:} Let $A := [a_{ij}]_{ij} \in M_{n \times n}(\mathbb{R})$ and let $k, l \in \{1, \ldots , n \}$. The $kl^\text{th}$\textit{-minor of A} is the $(n - 1) \times (n - 1)$ matrix $A_{kl}$ formed by removing the $k^\text{th}$ row and $l^\text{th}$ column of $A$.
+
+\bigskip 
+
+\noindent 
+\textbf{Def:} Let $A := [a_{ij}]_{ij} \in M_{n \times n}(\mathbb{R})$.
+\begin{enumerate}
+    \item If $n = 1$, i.e., if $A = [a_{11}]$ then $\det(A) := a_{11}$.
+    \item If $n \ge 2$ and $k \in \{1, \ldots , n \}$ is any fixed number, then 
+\begin{align*}
+    \det(A) &= \sum_{l = 1}^{n} (-1)^{k + 1} a_{kl} \det(A_{kl}) \\
+            &= (-1)^{k + 1} a_{k1} \det(A_{k1}) + \ldots + (-1)^{k + n} a_{kn} \det(A_{kn}) 
+\end{align*}
+\end{enumerate}
+
+\noindent 
+\textbf{Def:} A $n \times n$ matrix is said to be 
+\begin{enumerate}
+    \item \textit{upper triangular} if all entries below the diagonal are zero
+    \item \textit{lower triangular} if all entries above the diagonal are zero
+    \item \textit{diagonal} if all entries above and below the diagonal are zero
+\end{enumerate}
+
+\bigskip 
+
+\noindent 
+\textbf{Def 3.3.9:} Let $V$ be a finite dimensional vector space. The determinant of a linear map $T:V\rightarrow V$ is defined as 
+\[\det(T) := \det([T]_\alpha^\alpha),\] 
+where $\alpha$ is any fixed basis for $V$.
+
+\bigskip 
+
+\noindent 
+\textbf{Def 4.1.2:} Let $T: V \rightarrow V$ be a linear map. A vector $\bar v \in V$ is said to be an \textit{eigenvector} of $T$ if $\bar v \ne \bar 0$ and $\exists \lambda \in \mathbb{R}$ such that $T(\bar v)=\lambda \bar v$. In this case, $\lambda$ is called an \textit{eigenvalue} of $T$ corresponding to eigenvector $\bar v$.
