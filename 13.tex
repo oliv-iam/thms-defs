@@ -1,0 +1,68 @@
+\noindent
+\textbf{\LARGE Definitions and Theorems} \\
+\large Week: Dec. 2 - Dec. 4
+
+\normalsize
+
+\section*{Propositions}
+\textbf{Prop 4.1.9+:} Let $A \in M_{n \times n}(\mathbb{R})$. Then $\lambda \in \mathbb{R}$ is an eigenvalue of $A$ iff $\det(A-\lambda I)=0 \in \mathbb{R}$. In this case, every nonzero vector in $\ker(A-\lambda I)$ is an eigenvector of $A$ with the eigenvalue $\lambda$.
+
+\bigskip 
+
+\noindent 
+\textbf{Prop:} Let $A, B \in M_{n \times n}(\mathbb{R})$. Suppose $A$ and $B$ are similar. Then $P_A = P_B$.
+
+\bigskip 
+
+\noindent 
+\textbf{Prop:} Let $T: V \rightarrow V$ be a linear map, where $\dim(V) < \infty$, and let $\lambda \in \mathbb{R}$. Then the following are equivalent:
+\begin{enumerate}
+    \item $\lambda$ is an eigenvalue of $T$ 
+    \item $\lambda$ is an eigenvalue of the $n \times n$ matrix $[T]_\alpha^\alpha$
+    \item $\det([T]_\alpha^\alpha-\lambda I)=0$ 
+\end{enumerate}
+Moreover, a vector $\bar v \in V$ is an eigenvector of $T$ iff $[\bar v]_\alpha \in \mathbb{R}^n$ is an eigenvector of $[T]_\alpha^\alpha$.
+
+\bigskip 
+
+\noindent 
+\textbf{Thm:} Let $T: V \rightarrow V$ be a linear map, where $\dim(V) < \infty$. Then the following are equivalent:
+\begin{enumerate}
+    \item $T$ is diagonalizable 
+    \item There is a basis $\alpha$ of $V$ consisting entirely of eigenvectors of $T$ 
+    \item For any basis $\beta$ of $V$, the matrix $[T]_\beta^\beta$ is similar to a diagonal matrix, i.e., $\exists Q \in M_{n \times n}(\mathbb{R})$ which is invertible and $\exists D \in M_{n \times n}(\mathbb{R})$ which is diagonal such that $[T]_\beta^\beta=QDQ^{-1}$.
+\end{enumerate}
+In this case, the diagonal entries of $D$ are then eigenvalues of $T$(?) and the columns of $Q$ are the coordinate vectors corresponding to the eigenvectors of $T$.
+
+\bigskip 
+
+\noindent 
+\textbf{Corollary:} Let $A \in M_{n \times n}(\mathbb{R})$. Then the following are equivalent:
+\begin{enumerate}
+    \item A is diagonalizable (i.e., $T_A:\mathbb{R}^n \rightarrow \mathbb{R}^n$, defined $\bar x \mapsto A\bar x$, is diagonalizable)
+    \item There is a basis of $\mathbb{R}^n$ consisting entirely of eigenvectors of $A$ 
+    \item $A$ is similar to a diagonal matrix $D \in M_{n \times n}(\mathbb{R})$, i.e., $\exists Q \in M_{n \times n}(\mathbb{R})$ which is invertible and satisfies $A=QDQ^-1$
+\end{enumerate}
+In this case, the diagonal enries of $D$ are the eigenvalues of $A$ and the columns of $Q$ are the corresponding eigenvectors of $A$.
+
+\pagebreak 
+
+\section*{Definitions}
+\textbf{Def 4.1.2:} Let $T: V \rightarrow V$ be a linear map. A vector $\bar v \in V$ is said to be an \textit{eigenvector} of $T$ if $\bar v \ne \bar 0$ and $\exists \lambda \in \mathbb{R}$ such that $T(\bar v)=\lambda \bar v$. In this case, $\lambda$ is called an \textit{eigenvalue} of $T$ corresponding to eigenvector $\bar v$.
+
+\bigskip 
+
+\noindent 
+\textbf{Def:} Let $A \in M_{n \times n}(\mathbb{R})$. The polynomial $P_A:\mathbb{R} \rightarrow \mathbb{R}$ given by $p_A(t):=\det(A-tI)$ is called the \textit{characteristic polynomial} of $A$.
+
+\bigskip 
+
+\noindent 
+\textbf{Def:} Let $T: V \rightarrow V$ be a linear map, where $\dim(V) < \infty$. The map $T$ is said to be \textit{diagonalizable} if there exists a basis $\alpha$ of $V$ such that $[T]_\alpha^\alpha$ is a diagonal matrix, i.e., 
+\[[T]_\alpha^\alpha = 
+\begin{bmatrix}
+    \lambda_1 & & 0 \\ 
+     & \ddots \\
+    0 & & \lambda_n
+\end{bmatrix} \]
+for some $\lambda_i \in \mathbb{R}$.
