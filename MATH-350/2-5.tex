@@ -6,6 +6,10 @@
 
 \section*{Definitions}
 
+\defn $\ast$ is a \textit{binary operation} on a set $G$ if $\forall x, y \in G,\; x \ast y \in G$
+
+\bigskip 
+
 \defn Let $G$ be a set, and let $\ast: G \times G \rightarrow G$ be a \textit{binary operation} on $G$. Suppose
 \begin{enumerate}
     \item $\ast$ is \textit{associative}, i.e., $\forall x, y \in G, \; (x \ast y) \ast z = x \ast (y \ast z)$
@@ -14,3 +18,48 @@
 \end{enumerate}
 We then say that $(G, \ast)$ is a \textit{group}.
 If $(G, \ast)$ is a group and $\ast$ is \textit{commutative}, we say $G$ is an \textit{abelian group}.
+
+\section*{Theorems}
+\textbf{Lemma:} (division algorithm) Let $a, n \in \Z$ with $ n \ge 1$. Then $\exists ! q, r \in \Z$ s.t.
+\begin{enumerate}
+    \item $a = qn + r$
+    \item $0 \le r \le n - 1$
+\end{enumerate}
+
+\prop Let $G$ be a group.
+\begin{enumerate}
+    \item The identity element $e$ is unique
+    \item $\forall x \in G$, the inverse $x^{-1}$ is unique
+\end{enumerate}
+
+\prop Let $G$ be a group. Then 
+\begin{enumerate}
+    \item $\forall x \in G,\; (x^{-1})^{-1} = x$
+    \item $\forall x, y \in G, \; (xy)^{-1}=y^{-1}x^{-1}$
+\end{enumerate}
+
+\prop Let $G$ be a group. 
+\begin{enumerate}
+    \item If $x, y \in G$ s.t. $xy = e$, then $x=y^{-1}$ and $y=x^{-1}$
+    \item If $x, g \in G$ s.t. $xg = x$ (or $gx = x$), then $g = e$
+\end{enumerate}
+
+\prop (cancellation laws) Let $G$ be a group, and $x, y, z \in G$. Then 
+\begin{enumerate}
+    \item If $xy = xz$, then $y = z$
+    \item If $yx = zx$, then $y = z$
+\end{enumerate}
+
+\bigskip 
+
+\noindent 
+\textbf{Corollary:} Let $G$ be a group with $g \in G$. Define $f_1, f_2: G \rightarrow G$ by $f_1(x) = gx,\; f_2(x) = xg$. Then $f_1$ and $f_2$ are 1 to 1 and onto.
+
+\bigskip 
+
+\noindent 
+\textbf{Corollary:} (stated differently) Let $G$ be a group, $g \in G$. Then $\forall y \in G$,
+\begin{enumerate}
+    \item $\exists! x_1 \in G$ s.t. $gx_1 = y$
+    \item $\exists! x_2 \in G$ s.t. $x_2g = y$
+\end{enumerate} 
