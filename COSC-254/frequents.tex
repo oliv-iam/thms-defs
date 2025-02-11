@@ -1,0 +1,30 @@
+\noindent
+\textbf{\LARGE Definitions and Theorems} \\
+\large Frequent Items
+
+
+\normalsize
+
+\defn \textit{support} $s_D(a)$ of item $a$ in dataset $D$: the number of transactions in $D$ that contain $a$, i.e., 
+\[ s_D(a) = |\{t \in D \mid a \in t\}| \]
+
+\defn \textit{frequency} $f_D(a)$ of an item $a \in D$: the fraction of transactions containing $a$, i.e.,
+\[ f_D(a) = \frac{s_D(a)}{|D|} \]
+
+\defn set of frequent items with respect to $\theta$: 
+\[ F(D, \theta) = \{(a, f_D(a)) \mid a \in I \text{ and } f_D(a) \ge \theta \} \]
+
+\defn \textit{uniform random sampling}: a small set $S$ of transactions is chosen \textit{uniformly at random}, i.e., for a fixed sample size $m$, every $A \subseteq D$ with $|A| = m$ has an equal probability of being chosen.
+
+\defn $\epsilon$ \textit{approximations}: for $\epsilon \in (0,1)$, an $\epsilon$-approximation to $F(D, \theta)$ is a set $C$ of pairs ($a, f_S(a))$ s.t.
+\begin{enumerate}
+    \item there is ($a, f_S(a)) \in C$ for every $(a, f_D(a)) \in F(D, \theta)$
+    \item for any ($a, f_S(a)) \in C$ s.t. $(a, f_D(a)) \notin F(D, \theta)$, it holds that $f_D(a) \ge \theta - \epsilon$
+    \item it holds $\max_{(a, f_S(a)) \in C} |f_S(a) - f_D(a)| \le \frac{\epsilon}{2} $
+\end{enumerate}
+
+\thm When $\max_{a \in I}|f_S(a) - f_D(a)| \le \frac{\epsilon}{2}$, then $F(S, \theta - \frac{\epsilon}{2})$ is an $\epsilon$-approximation for $F(D, \theta)$
+
+\thm Let $\delta \in (0,1)$ be a failure probability, and $m$ be a sample size. With probability $\ge 1 - \delta$ (over the choice of $S$ with $|S| = m$) it holds
+\[ \max_{a \in I}|f_S(a) - f_D(a)| < \sqrt{\frac{d_S + \ln(\frac{1}{\delta})}{2m}} \]
+for $d_s = \lfloor( \log_2 \max_{t \in S}|t|) + 1 \rfloor $

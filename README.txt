@@ -1,3 +1,4 @@
 All Theorems and Definitions
-271: Linear Algebra
-350: Groups, Rings, and Fields
+MATH 271: Linear Algebra
+MATH 350: Groups, Rings, and Fields
+COSC 254: Data Mining

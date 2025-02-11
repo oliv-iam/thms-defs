@@ -2,13 +2,17 @@
 \textbf{\LARGE Definitions and Theorems} \\
 \large 2-5: Basic properties of groups
 
+\newcommand{\congmod}[3]{
+        #1 \equiv #2 \text{ (mod } #3)
+    }
+
 \normalsize
 
 \section*{Definitions}
 
-\defn $\ast$ is a \textit{binary operation} on a set $G$ if $\forall x, y \in G,\; x \ast y \in G$
+\subsection*{Groups, subgroups}
 
-\bigskip 
+\defn $\ast$ is a \textit{binary operation} on a set $G$ if $\forall x, y \in G,\; x \ast y \in G$
 
 \defn Let $G$ be a set, and let $\ast: G \times G \rightarrow G$ be a \textit{binary operation} on $G$. Suppose
 \begin{enumerate}
@@ -19,7 +23,69 @@
 We then say that $(G, \ast)$ is a \textit{group}.
 If $(G, \ast)$ is a group and $\ast$ is \textit{commutative}, we say $G$ is an \textit{abelian group}.
 
+\defn Let $G$ be a group. Suppose $\exists a \in G$ s.t. $G = \{a^m \mid m \in \Z\}$, i.e., $\exists a \in G$ s.t. $\forall g \in G, \; \exists m \in \Z $ s.t. $g = a^m$. 
+Then we say 
+\begin{itemize}
+    \item $a$ is a \textit{generator}
+    \item $G$ is \textit{cyclic}
+\end{itemize}
+
+\defn Let $G$ be a group. 
+\begin{itemize}
+    \item the \textit{order of} $G$, denoted $|G|$ or $\#G$, is the number of elements in $G$ 
+    \item let $a \in G$. The \textit{order of} $a$, denoted $o(a)$, is the smallest integer $n \ge 1$ s.t. $a^n = e$, or $\infty$ if no such $n$ exists
+\end{itemize}
+
+\defn Let $(G, \ast)$ be a group, with subset $H \subseteq G$. If $(H, \ast)$ is also a group, we say $H$ is a \textit{subgroup} of $G$.
+
+\subsection*{Related definitions}
+
+\defn Let $m, n \in \Z$. We say $n \textit{ divides } m$, written $n \mid m$ if $\exists q \in \Z$ s.t. $m = nq$
+
+\defn Let $m, n \in \Z$, not both $0$. The \textit{greatest common divisor} of $m, n$, denoted $\gcd(m, n)$ or $(m, n)$ is the largest integer $d \ge 1$ s.t. $d \mid m$ and $d \mid n$.
+
+\defn $m, n \in \Z$ are called \textit{relatively prime} (or \textit{coprime}) if $(m, n) = 1$. 
+
+\bigskip 
+
+\noindent
+Common Sets:
+\begin{itemize}
+    \item $\Z$: set of integers 
+    \item $GL(2, \R)$: $2 \times 2$ invertible matrices with $\R$ entries
+    \item $\mathbb{Q}$: rational numbers (can be expressed as a fraction)
+    \item $C_n = \{j \in \Z \mid 0 \le j \le n - 1 \}$
+\end{itemize}
+
+\bigskip
+
+\noindent
+Misc (operations, notation, etc.):
+\begin{itemize}
+    \item $\oplus$: for any $a, b \in C, \; a \oplus b = 
+    \begin{cases}
+        a + b & \text{if } a + b < n \\
+        a + b - n & \text{if } a + b \ge n
+    \end{cases}$
+    \item $\congmod{j}{k}{n}$ means $n \mid (j - k)$
+\end{itemize}
+
+\pagebreak
+
 \section*{Theorems}
+
+Findings from homework:
+\begin{itemize}
+    \item $G$ a group. $(G, \ast)$ is abelian iff $(x \ast y)^{-1} = x^{-1} \ast y^{-1} $ for all $x, y \in G$
+    \item Let $G$ be a group s.t. $x^2 = e$ for all $x \in G$. Then $G$ is abelian
+    \item Let $G$ be a group. Then $G$ is abelian iff $(x \ast y)^2 = x^2 \ast y^2 $ for all $x, y \in G$
+    \item Fix $n \ge 1$. Let $x_1, x_2, y_1, y_2 \in \Z$ be integers s.t. $\congmod{x_1}{x_2}{n}$ and $\congmod{y_1}{y_2}{n}$. Then $\congmod{x_1y_1}{x_2y_2}{n}$
+    \item Let $G$ be a group, with $a, x \in G$. Then for any integer $n \ge 1$, we have \\ $(xax^{-1})^n = xa^nx^{-1}$ 
+\end{itemize}
+
+\bigskip
+
+\noindent
 \textbf{Lemma:} (division algorithm) Let $a, n \in \Z$ with $ n \ge 1$. Then $\exists ! q, r \in \Z$ s.t.
 \begin{enumerate}
     \item $a = qn + r$
@@ -63,3 +129,27 @@ If $(G, \ast)$ is a group and $\ast$ is \textit{commutative}, we say $G$ is an \
     \item $\exists! x_1 \in G$ s.t. $gx_1 = y$
     \item $\exists! x_2 \in G$ s.t. $x_2g = y$
 \end{enumerate} 
+
+\thm Let $G$ be a cyclic group. Then $G$ is abelian.
+
+\thm Let $G$ be a group, $a \in G$. Then $o(a) = |<a>|$
+
+\bigskip 
+
+\noindent 
+\textbf{Lemma:} Let $G$ be a group, $x \in G, \; m, n \in \Z$. Suppose $o(x) = n \ge 1$ and $x^m = e$. Then $n \mid m$
+
+\prop Let $G$ be a group, with $a \in G$. 
+\begin{enumerate}
+    \item $o(a) = \infty \Leftrightarrow (\forall j, k \in \Z, \; a^j=a^k \text{ iff } j=k$)
+    \item $o(a) = n \Leftrightarrow (\forall j, k \in \Z, \; a^i=a^j \text{ iff } \congmod{j}{k}{n}$
+\end{enumerate}
+
+\thm Let $m, n \in \Z$, not both zero. Then $\exists x, y \in \Z$ s.t. $mx + ny = (m, n)$.
+
+\thm Let $G$ be a group, $x \in G$, $m, n \in \Z$ with $n \ge 1$. Then 
+\begin{enumerate}
+    \item $o(x) = o(x^{-1})$
+    \item if $o(x) = n$ and $x^m = e$, then $n \mid m$
+    \item if $o(x) = n$, then $o(x^m) = \frac{n}{\gcd(m, n)}$
+\end{enumerate}
