@@ -1,0 +1,37 @@
+\noindent
+\textbf{\LARGE Definitions and Theorems} \\
+\large 6-9: Symmetric groups, direct products, cosets 
+
+\normalsize 
+
+\section*{Definitions}
+\defn Let $G, H$ groups. The set 
+\[G \times H = \{(g, h) \mid g \in G \text{ and } h \in H\}\] 
+with operation * given by $(g_1, h_1) \ast (g_2, h_2) = (g_1g_2, h_1h_2)$
+is called the \textit{(direct) product} of $G$ and $H$.
+
+\bigskip
+\noindent
+\textbf{Def/Prop:} Let $G_1, \ldots, G_n$ be groups. The set 
+\[G_1 \times \ldots \times G_n = \{(g_1, \ldots, g_n) \mid g_i \in G_i, \; \forall i = 1, \ldots, n\}\]
+with the operation $(g_1, \ldots, g_n)(\tilde{g}_1, \ldots, \tilde{g}_n) = (g_1\tilde{g}_1, \ldots, g_n\tilde{g}_n)$
+is a group, called the \textit{(direct) product group} of $G_1, \ldots, G_n$.
+
+\subsection*{Related Definitions}
+\defn Let $m_1, \ldots, m_n \in \Z$, not all zero. Then lcm($m_1, \ldots, m_n$) is the \textit{least common multiple} of $m_1, \ldots, m_n$ is the smallest positive integer $M \ge 1$ s.t. $m_i \mid M \forall i = 1, \ldots, n$.\\
+Note: lcm($m,n$) = $\frac{mn}{\gcd(m,n)}$
+
+
+\section*{Theorems}
+\prop Let $G, H$ be groups. Then $G \times H$ (with the above operation) is a group.
+
+\thm Let $A \subseteq G, B \subseteq H$ subgroups. Then $A \times B \subseteq G \times H$ is a subgroup.
+
+\prop Let $G_1, \ldots, G_n$ be groups. Let $G = G_1 \times \ldots \times G_n$. Then $G$ is abelian iff all of $G_1, \ldots, G_n$ is abelian.
+
+\thm Let $G_1, \ldots, G_n$ groups. Let $g_i \in G_i$ for $i = 1, \ldots, n$ with order $o(g_i)$. Then 
+$$o((g_1, \ldots, g_n)) = 
+\begin{cases}
+    \infty & \text{if any } o(g_i) \text{ is } \infty \\
+    \text{lcm}(o(g_i), \ldots, o(g_n)) & \text{otherwise}
+\end{cases}$$

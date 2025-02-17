@@ -38,6 +38,12 @@ Then we say
 
 \defn Let $(G, \ast)$ be a group, with subset $H \subseteq G$. If $(H, \ast)$ is also a group, we say $H$ is a \textit{subgroup} of $G$.
 
+\defn Let $G$ be a group. 
+\begin{itemize}
+    \item The \textit{center} of $G$ is $Z(G) = \{z \in G \mid zg = gz \forall g \in G\}$
+    \item Let $g \in G$. The \textit{centralizer} of $g$ is $Z(g) = \{z \in G \mid zg = gz \}$
+\end{itemize}
+
 \subsection*{Related definitions}
 
 \defn Let $m, n \in \Z$. We say $n \textit{ divides } m$, written $n \mid m$ if $\exists q \in \Z$ s.t. $m = nq$
@@ -68,6 +74,7 @@ Misc (operations, notation, etc.):
         a + b - n & \text{if } a + b \ge n
     \end{cases}$
     \item $\congmod{j}{k}{n}$ means $n \mid (j - k)$
+    \item $\langle a \rangle = \{a^n \mid n \in \Z\}$
 \end{itemize}
 
 \pagebreak
@@ -81,6 +88,7 @@ Findings from homework:
     \item Let $G$ be a group. Then $G$ is abelian iff $(x \ast y)^2 = x^2 \ast y^2 $ for all $x, y \in G$
     \item Fix $n \ge 1$. Let $x_1, x_2, y_1, y_2 \in \Z$ be integers s.t. $\congmod{x_1}{x_2}{n}$ and $\congmod{y_1}{y_2}{n}$. Then $\congmod{x_1y_1}{x_2y_2}{n}$
     \item Let $G$ be a group, with $a, x \in G$. Then for any integer $n \ge 1$, we have \\ $(xax^{-1})^n = xa^nx^{-1}$ 
+    \item Every subgroup of an abelian group is abelian
 \end{itemize}
 
 \bigskip
@@ -110,6 +118,7 @@ Findings from homework:
     \item If $x, g \in G$ s.t. $xg = x$ (or $gx = x$), then $g = e$
 \end{enumerate}
 
+\pagebreak
 \prop (cancellation laws) Let $G$ be a group, and $x, y, z \in G$. Then 
 \begin{enumerate}
     \item If $xy = xz$, then $y = z$
@@ -132,7 +141,7 @@ Findings from homework:
 
 \thm Let $G$ be a cyclic group. Then $G$ is abelian.
 
-\thm Let $G$ be a group, $a \in G$. Then $o(a) = |<a>|$
+\thm Let $G$ be a group, $a \in G$. Then $o(a) = |\langle a \rangle|$
 
 \bigskip 
 
@@ -153,3 +162,32 @@ Findings from homework:
     \item if $o(x) = n$ and $x^m = e$, then $n \mid m$
     \item if $o(x) = n$, then $o(x^m) = \frac{n}{\gcd(m, n)}$
 \end{enumerate}
+
+\pagebreak
+\thm Let $G$ be a group, $H \subseteq G$ a subset. Then the following are equivalent:
+\begin{enumerate}
+    \item $H$ is a subgroup of $G$
+    \item $H$ satisfies: \begin{enumerate}
+        \item $e \in H$
+        \item $H$ is closed under $\ast$
+        \item $H$ is closed under inverses.
+    \end{enumerate}
+\end{enumerate}
+
+\thm Let $G$ be a group, with $a \in G$. Then $\langle a \rangle$ is a subgroup of $G$. 
+
+\thm Let $G$ be a group, with $H, K \subseteq G$ subgroups. Then $H \cap K$ is a subgroup of $G$.
+
+\thm Let $G$ be a cyclic group and $H \subseteq G$ a subgroup. Then $H$ is also cyclic.
+
+\thm (5.7) If $G$ is infinite cyclic, its subgroups are $\langle0\rangle = \{0\}, \langle1\rangle = \langle-1\rangle = \Z, \langle3\rangle = \langle-3\rangle, \ldots$
+
+\thm (5.5) Let $G = \langle a \rangle$ cyclic of order $n$ (with $1 \le n < \infty)$
+\begin{enumerate}
+    \item $\forall m \ge 1$, $G$ has a subgroup $H$ with $|H| = m \Longleftrightarrow m \mid n$
+    \item In that case, that subgroup $H$ is unique
+    \item $\forall r, s \in \Z$, we have $\langle a^r \rangle = \langle a^s \rangle \Longleftrightarrow (r, n) = (s, n)$
+\end{enumerate}
+
+\noindent
+\textbf{Corollary:} (5.6) The subgroups of $C_n$ are, for each $k \ge 1$ with $k \mid n$, $\langle \frac{n}{k} \rangle$
