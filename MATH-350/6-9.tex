@@ -4,6 +4,14 @@
 
 \normalsize 
 
+\section*{Direct product}
+
+
+
+
+
+
+
 \section*{Definitions}
 \defn Let $G, H$ groups. The set 
 \[G \times H = \{(g, h) \mid g \in G \text{ and } h \in H\}\] 
@@ -17,12 +25,61 @@ is called the \textit{(direct) product} of $G$ and $H$.
 with the operation $(g_1, \ldots, g_n)(\tilde{g}_1, \ldots, \tilde{g}_n) = (g_1\tilde{g}_1, \ldots, g_n\tilde{g}_n)$
 is a group, called the \textit{(direct) product group} of $G_1, \ldots, G_n$.
 
+\defn Let $x \ne \varnothing$. Define $S_X = \{f:X \rightarrow X \mid \text{f is invertible}\}$. We call $(S_X, \circ)$ the \textit{symmetric group} on $X$.
+
+\defn $S_n = \{f: \{1, \ldots, n \} \rightarrow \{1, \ldots, n \} \mid \text{$f$ is invertible} \}$ is the \textit{symmetric group of degree n}
+
+\bigskip 
+\noindent 
+\textbf{Terminology:} cycles 
+\begin{itemize}
+    \item An element of $S_n$ of the form $(x_1, x_2, \ldots, x_r)$ (where $x_1, \ldots, x_r \in \{1, \ldots, n \}$ all distinct) is called a \textit{cycle}, or an \textit{r-cycle}
+    \item A 2-cycle is called a \textit{transposition}
+    \item If $\sigma_1 = (x_1, \ldots, x_r)$ and $\sigma_2 = (y_1, \ldots, y_s)$ are cycles, if $\{x_1, \ldots, x_r\} \cap \{y_1, \ldots, y_s\} = \varnothing $, we say $\sigma_1, \sigma_2$ are \textit{disjoint cycles}
+\end{itemize}
+
 \subsection*{Related Definitions}
 \defn Let $m_1, \ldots, m_n \in \Z$, not all zero. Then lcm($m_1, \ldots, m_n$) is the \textit{least common multiple} of $m_1, \ldots, m_n$ is the smallest positive integer $M \ge 1$ s.t. $m_i \mid M \forall i = 1, \ldots, n$.\\
 Note: lcm($m,n$) = $\frac{mn}{\gcd(m,n)}$
 
+\defn Let $S, T$ be sets. 
+\begin{itemize}
+    \item A \textit{function} $f: S \rightarrow T$ assigns, to each $s \in S$, a unique $t \in T$. In that case, we write $f(s) = t$, or $f: s\mapsto t$. That is, $\forall s \in S, \; \exists!t\in T$ s.t. $f(s) = t$
+    \item $S$ is called the \textit{domain} of $f$, and the set $T$ is called the \textit{codomain} or \textit{target set} of $f$.
+\end{itemize}
+
+\defn Let $S, T$ sets, and $f: S \rightarrow T$ a function. 
+\begin{enumerate}
+    \item The set $\{f(s) \mid s \in S \} = \{t \in T \mid \exists s \in S$ s.t. $f(s) = t\}$, which is a subset of $T$, is called the \textit{image} of $f$ (or \textit{range} of $f$) and is denoted $f(S)$ or im$(f)$.
+    \item We say $f$ is \textit{onto}, or \textit{surjective}, if $f(S) = T$, i.e., if $\forall t \in T, \; \exists s \in S$ s.t. $f(s) = t$
+    \item We say $f$ is \textit{one-to-one}, or \textit{injective}, if $forall s_1, s_2 \in S$ s.t. $f(s_1) = f(s_2)$, we have $s_1 = s_2$
+    \item We say $f$ is \textit{bijective} if it is both injective and surjective. 
+    \item The \textit{identity function} on $S$ is the function $\text{id}_S : S \rightarrow S$ given by $\text{id}_s(x) = x$ for all $x \in S$.
+\end{enumerate}
+
+\defn Two functions $f_1$ and $f_2$ are said to be equal if 
+\begin{enumerate}
+    \item The domain $S$ of $f_1$ is the same as the domain of $f_2$ (in the sense of equality of sets)
+    \item For all $s \in S$, we have $f_1(s) = f_2(s)$
+\end{enumerate}
+
+\defn Let $S, T, U$ be sets, and let $f: S \rightarrow T$ and $g: T \rightarrow U$ be functions. In this situation, we define the \textit{composition} of $g$ and $f$, denoted $g \circ f(s)$, to be the function 
+\[g \circ f : S \rightarrow U \text{ given by } g \circ f(s) = g(f(s))\]
+
+\defn Let $S, T$ be sets, and let $f: S \rightarrow T$ be a function. We say $f$ is \textit{invertible} if there exists a function $g: T \rightarrow S$ such that 
+\[ f \circ g = \text{id}_T \text{ and } g \circ f = \text{id}_S \]
+That is, if both:
+\begin{itemize}
+    \item $\forall s \in S, \; g(f(s)) = s$
+    \item $\forall t \in T, \; f(g(t)) = t$
+\end{itemize}
+In that case, $g$ is called the \textit{inverse function} of $f$, or simply the \textit{inverse} of $f$, and we write $f^{-1} = g$.
+
 
 \section*{Theorems}
+
+\subsection*{Homework Findings}
+\subsection*{Groups}
 \prop Let $G, H$ be groups. Then $G \times H$ (with the above operation) is a group.
 
 \thm Let $A \subseteq G, B \subseteq H$ subgroups. Then $A \times B \subseteq G \times H$ is a subgroup.
@@ -35,3 +92,32 @@ $$o((g_1, \ldots, g_n)) =
     \infty & \text{if any } o(g_i) \text{ is } \infty \\
     \text{lcm}(o(g_i), \ldots, o(g_n)) & \text{otherwise}
 \end{cases}$$
+
+\thm Let $G_1, \ldots, G_n$ groups. Then 
+\begin{itemize}
+    \item If $G_1 \times \ldots \times G_n$ is cyclic, then every $G_i$ is cyclic 
+    \item If $G_1, \ldots, G_n$ are all finite cyclic groups, then \\
+    $G_1 \times \ldots \times G_n$ cyclic $\Leftrightarrow \forall i \ne j, \; \gcd(|G_i|, |G_j|) = 1$
+\end{itemize}
+
+\thm Let $\sigma \in S_n$. Then $\exists$ (pairwise) disjoint cycles $\sigma_1, \ldots, \sigma_m \in S_n$ s.t. $\sigma = \sigma_1 \circ \sigma_2 \ldots \circ \sigma_m$
+
+\prop Two parts:
+\begin{enumerate}
+    \item For any $r \ge 1$, an r-cycle $\sigma \in S_n$ has $o(\sigma) = r$
+    \item If $\sigma \in S_n$ has $\sigma = \sigma_1 \ldots \sigma_m$, then $o(\sigma) = \text{lcm}(o(\sigma_1), \ldots, o(\sigma_m))$
+\end{enumerate}
+
+\thm Every $\sigma \in S_n$ can be written as a product of transpositions
+
+\subsection*{Function Review}
+\prop Let $S, T$ be sets, and let $f: S \rightarrow T$ be a function. Then $f$ is invertible iff $f$ is bijective. In that case, the inverse function of $f^{-1}:T \rightarrow S$ is given by $f^{-1}(t) = \text{ the unique } s \in S$ such that $f(s) = t$ for all $t \in T$
+
+\prop Let $S, T, U$ be sets, and let $f: S \rightarrow T$ and $g: T \rightarrow U$ be invertible functions. 
+\begin{enumerate}
+    \item The inverse of $f$ is unique. That is, if $F: T \rightarrow S$ is a function s.t. $F \circ f = \text{id}_S$ and $f \circ F = \text{id}_T$, then we have $F = f^{-1}$
+    \item The inverse function $f^{-1}$ is also invertible, and its inverse is $(f^{-1})^{-1} = f$
+    \item The composition $g \circ f$ is also invertible, and its inverse is $(g \circ f)^{-1} = f^{-1} \circ g^{-1}$
+\end{enumerate}
+
+\prop Let $S, T, U, V$ be sets, and let $f: S \rightarrow T, g: T \rightarrow U, h: U \rightarrow V$ be functions. Then $h \circ (g \circ f) = (h \circ g) \circ f$.
